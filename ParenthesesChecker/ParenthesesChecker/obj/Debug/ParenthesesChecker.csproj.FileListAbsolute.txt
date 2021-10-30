@@ -1,0 +1,6 @@
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\ParenthesesChecker\bin\Debug\ParenthesesChecker.exe.config
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\ParenthesesChecker\bin\Debug\ParenthesesChecker.exe
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\ParenthesesChecker\bin\Debug\ParenthesesChecker.pdb
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\ParenthesesChecker\obj\Debug\ParenthesesChecker.csprojAssemblyReference.cache
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\ParenthesesChecker\obj\Debug\ParenthesesChecker.exe
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\ParenthesesChecker\obj\Debug\ParenthesesChecker.pdb

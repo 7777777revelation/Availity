@@ -1,0 +1,16 @@
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\ParenthesesChecker.exe
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\ParenthesesChecker.pdb
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\ParenthesesChecker.exe.config
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.csprojAssemblyReference.cache
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.csproj.CopyComplete
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.pdb

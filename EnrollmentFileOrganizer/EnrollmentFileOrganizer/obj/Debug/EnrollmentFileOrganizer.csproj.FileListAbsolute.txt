@@ -1,0 +1,6 @@
+C:\Users\fbren\Documents\GitHub\Availity\EnrollmentFileOrganizer\EnrollmentFileOrganizer\bin\Debug\EnrollmentFileOrganizer.exe.config
+C:\Users\fbren\Documents\GitHub\Availity\EnrollmentFileOrganizer\EnrollmentFileOrganizer\bin\Debug\EnrollmentFileOrganizer.exe
+C:\Users\fbren\Documents\GitHub\Availity\EnrollmentFileOrganizer\EnrollmentFileOrganizer\bin\Debug\EnrollmentFileOrganizer.pdb
+C:\Users\fbren\Documents\GitHub\Availity\EnrollmentFileOrganizer\EnrollmentFileOrganizer\obj\Debug\EnrollmentFileOrganizer.csprojAssemblyReference.cache
+C:\Users\fbren\Documents\GitHub\Availity\EnrollmentFileOrganizer\EnrollmentFileOrganizer\obj\Debug\EnrollmentFileOrganizer.exe
+C:\Users\fbren\Documents\GitHub\Availity\EnrollmentFileOrganizer\EnrollmentFileOrganizer\obj\Debug\EnrollmentFileOrganizer.pdb
