@@ -1,0 +1,144 @@
+1. Proudest professional acheivement:
+   I would have to choose between the Operating System that I wrote in my Senior Level Computer Science class, in which we implemented part of an operating system, including the timer interrupt service routine, the keyboard driver, etc. and a project I worked on at Deluxe to implement a Custom Report Program.  With the custom report program, I setup a Windows Forms application that could produce result sets for a very flexible user interface, such that the user could select the fields desired on the report, field filters, etc. and the query engine would use a series of left outer joins to come up with the result set. It was a useful experiment that lead to information that was used in the modified implementation of a custom report system in the production environment of the companies Payroll product.
+
+2. I recently read "Visitor Design Pattern in C# with Real-Time Example"
+https://dotnettutorials.net/lesson/visitor-design-pattern/
+I would recommend it because it give an actual example of what the pattern could be used for in the real world.  It is one thing to learn a design pattern, but it is only truly useful if you know how you could implement it in the real world, and in what kind of situation.  I felt the article did a really great job of explaining how the pattern could actually be used.
+
+3. Explain what Availity does to grandma?  Availity makes the technology between Health Care Providers and Insurance companies seamless and efficient so that they can concentrate on what they do best and not have to worry about computer issues!!
+
+(For 4, 5, and 6, please see code in GitHub)
+
+For question 7, below is my sample script for testing.
+I modified the name of the table 'Order' to 'Orders', since 'order' is a keywork in SQL.
+
+=======================================
+
+CREATE TABLE Customer (
+    CustID int NOT NULL,
+    FirstName varchar(255),
+    LastName varchar(255),
+    PRIMARY KEY (CustID)
+);
+
+
+CREATE TABLE Orders (
+ OrderID int NOT NULL,
+ CustomerID int FOREIGN KEY REFERENCES dbo.Customer(CustID),
+OrderDate DATE,
+ PRIMARY KEY (OrderID)
+);
+
+
+CREATE TABLE OrderLine (
+ OrderLineID int NOT NULL,
+ OrdID int FOREIGN KEY REFERENCES Orders(OrderID),
+ ItemName varchar(255) NOT NULL,
+ Cost DECIMAL(10,2),
+ Quantity int,
+ PRIMARY KEY (OrderLineID)
+);
+
+
+INSERT INTO Customer VALUES (1, 'George', 'Sorenson');
+INSERT INTO Customer VALUES (2, 'Harry', 'Severt');
+INSERT INTO Customer VALUES (3, 'Zaina', 'Severin');
+INSERT INTO Customer VALUES (4, 'Robert', 'Sarachnid');
+INSERT INTO Customer VALUES (5, 'Adam', 'Morenson');
+INSERT INTO Customer VALUES (6, 'Jenny', 'Simple');
+INSERT INTO Customer VALUES (7, 'Kevin', 'Forenson');
+INSERT INTO Customer VALUES (8, 'Sue', 'Sarple');
+INSERT INTO Customer VALUES (9, 'Adam', 'Sorenson');
+INSERT INTO Customer VALUES (10, 'Bob', 'Sorenson');
+
+
+INSERT INTO Orders VALUES (1, 1, '01-01-2021');
+INSERT INTO Orders VALUES (2, 2, '04-30-2021');
+INSERT INTO Orders VALUES (3, 3, '05-01-2021');
+INSERT INTO Orders VALUES (4, 4, '06-01-2021');
+INSERT INTO Orders VALUES (5, 5, '08-01-2021');
+INSERT INTO Orders VALUES (6, 2, '06-30-2021');
+
+
+INSERT INTO OrderLine VALUES (1,1,'Napkins',3.33,1);
+INSERT INTO OrderLine VALUES (2,2,'Forks', 2.25, 3);
+INSERT INTO OrderLine VALUES (3,3,'Spoons', 2.80,2);
+INSERT INTO OrderLine VALUES (4,4,'Knives',3.01,4);
+INSERT INTO OrderLine VALUES (5,5, 'Hot Sauce',4.23,2);
+INSERT INTO OrderLine VALUES (6,6,'Spoons', 2.80, 4);
+
+
+
+
+7 a. 
+select LastName, FirstName from Customer where LastName like 'S%'
+ORDER BY LastName DESC, FirstName DESC;
+
+7b
+  show total value of all orders each customer has placed in the past six months
+   Any customer without any orders should show a $0 value
+
+--this is the 'driving' query..gives us all names, and we'll left outer join
+-- with the customers having orders in the last 6 mos
+SELECT  (c.LastName + ', ' + c.FirstName) as Name, 
+   CASE
+     WHEN g.LineAmountTotal IS NULL THEN 0
+	 ELSE g.LineAmountTotal
+   END as TotalLineAmount
+
+FROM 
+Customer c
+
+LEFT OUTER JOIN
+
+--Subquery 'g' gives you the order totals for customers who had orders in the last 6 mos
+(   SELECT  (c.LastName + ', ' + c.FirstName) as Name, SUM(ol.Cost * ol.Quantity) as LineAmountTotal, c.CustID
+FROM 
+  Customer c LEFT OUTER JOIN Orders ord ON c.CustID = ord.CustomerID
+  LEFT OUTER JOIN OrderLine ol ON ord.OrderID = ol.OrdID
+WHERE 
+   ord.OrderDate >= 
+      (SELECT CAST(DATEADD(m, -6, GetDate()) as date))
+GROUP BY
+   c.FirstName,
+   c.LastName ,
+   c.CustID
+)  as g
+
+on c.CustID = g.CustID
+
+===========================================================
+7c Amend the query from the previous question to only show those customers who have a total order
+    value of more than $100 and less than $500 in the past six months
+
+
+SELECT  (c.LastName + ', ' + c.FirstName) as Name, 
+   CASE
+     WHEN g.LineAmountTotal IS NULL THEN 0
+	 ELSE g.LineAmountTotal
+   END as TotalLineAmount
+FROM 
+Customer c
+LEFT OUTER JOIN
+
+--Subquery 'g' gives you the order totals for customers who had orders in the last 6 mos
+(   SELECT  (c.LastName + ', ' + c.FirstName) as Name, SUM(ol.Cost * ol.Quantity) as LineAmountTotal, c.CustID
+FROM 
+  Customer c LEFT OUTER JOIN Orders ord ON c.CustID = ord.CustomerID
+  LEFT OUTER JOIN OrderLine ol ON ord.OrderID = ol.OrdID
+WHERE 
+   ord.OrderDate >= 
+      (SELECT CAST(DATEADD(m, -6, GetDate()) as date))
+GROUP BY
+   c.FirstName,
+   c.LastName ,
+   c.CustID
+HAVING (SUM(ol.Cost * ol.Quantity) > 100.00) and (SUM(ol.Cost * ol.Quantity) < 500.00)
+--my test data worked with the below 'having', so the above should work fine
+-- with the proper test data
+--HAVING (SUM(ol.Cost * ol.Quantity) > 5.60) and (SUM(ol.Cost * ol.Quantity) < 17.95)
+)  as g
+
+on c.CustID = g.CustID
+
+
