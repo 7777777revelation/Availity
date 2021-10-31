@@ -1,0 +1,53 @@
+<div class="container">
+    <h1>Healthcare Provider Registration</h1>
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-group">
+            <label for="firstname">First Name</label><br>
+            <input #name="ngModel" required minlength="1" type="text" id="firstname" class="form-control" [(ngModel)] ="model.Firstname" name="firstname">
+            <div *ngIf = "name.touched && name.invalid" class="alert alert-danger">
+                <p *ngIf="name.errors.required">First Name Required!</p>
+            </div>            
+        </div>
+                
+        <div class="form-group">
+            <label for="lastname">Last Name</label><br>
+            <input #lname="ngModel" required type="text" id="lastname" name = "lastname" class = "form-control" [(ngModel)]="model.Lastname">
+            <div *ngIf = "lname.touched && lname.invalid" class="alert alert-danger">
+                <p *ngIf="lname.errors.required">Last Name Required!</p>
+            </div>               
+        </div> 
+        
+        <div class="form-group">
+            <label for="npinumber">NPI Number</label><br>
+            <input required type="text" id="npinumber" name ="npinumber" class = "form-control" [(ngModel)]="model.NpiNumber">
+        </div> 
+
+        <div class="form-group">
+            <label for="businessaddress">Business Address</label><br>
+            <input required type="text" id="businessaddress" name ="businessaddress" class = "form-control" [(ngModel)]="model.BusinessAddress">
+        </div> 
+
+        <div class="form-group">
+            <label for="telephonenumber">Telephone Number</label><br>
+            <input required type="text" id="telephonenumber" name ="telephonenumber" class = "form-control" [(ngModel)]="model.TelephoneNumber">
+        </div> 
+
+        <div class="form-group">
+            <label for="email">Email</label><br>
+            <input required type="text" id="email" name ="email" class = "form-control" [(ngModel)]="model.Email">
+        </div> 
+        
+        <!-- <div [formGroup]="form">
+            <mat-form-field appearance="fill">
+              <mat-label>Phone number</mat-label>
+              <example-tel-input formControlName="tel" required></example-tel-input>
+              <mat-icon matSuffix>phone</mat-icon>
+              <mat-hint>Include area code</mat-hint>
+            </mat-form-field>
+          </div> -->
+
+        <button class="btn btn-primary" type="submit">Register</button>             
+    </form>
+</div>
+
+

@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+}
+
+button {
+  float: right;
+}
+
+label {
+  text-align: left;
+}
+
+.alert-danger {
+  background-color: #f44336;
+}
+
+.alert {
+  color: white;
+  margin-bottom: 15px;
+  text-align: left;
+}
