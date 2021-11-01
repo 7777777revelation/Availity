@@ -8,8 +8,6 @@ C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\
 C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\ParenthesesChecker.exe
 C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\ParenthesesChecker.pdb
 C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\ParenthesesChecker.exe.config
-C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.csprojAssemblyReference.cache
 C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.csproj.CopyComplete
 C:\Users\fbren\Documents\GitHub\Availity\ParenthesesChecker\UnitTests\obj\Debug\UnitTests.dll
