@@ -45,10 +45,6 @@ namespace EnrollmentFileOrganizer
                     tempList.Add(enrollmentRecordsByInsuranceCo[i]);
                 }
             }
-
-
-            int test = 5;
-
         }
     }
 }

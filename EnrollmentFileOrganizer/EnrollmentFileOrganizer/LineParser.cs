@@ -73,7 +73,8 @@ namespace EnrollmentFileOrganizer
                     else
                     {
                         //TODO: change to StringBuilder, as this concatenation really inefficient
-                        columnString = columnString + _line[i];
+                        if (isStartQuote)
+                          columnString = columnString + _line[i];
                     }
                 }
             }
