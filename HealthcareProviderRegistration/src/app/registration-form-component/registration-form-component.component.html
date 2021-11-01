@@ -37,16 +37,7 @@
             <input required type="text" id="email" name ="email" class = "form-control" [(ngModel)]="model.Email">
         </div> 
         
-        <!-- <div [formGroup]="form">
-            <mat-form-field appearance="fill">
-              <mat-label>Phone number</mat-label>
-              <example-tel-input formControlName="tel" required></example-tel-input>
-              <mat-icon matSuffix>phone</mat-icon>
-              <mat-hint>Include area code</mat-hint>
-            </mat-form-field>
-          </div> -->
-
-        <button class="btn btn-primary" type="submit">Register</button>             
+        <button class="btn btn-primary" type="submit" [disabled]="!login.valid">Register</button>             
     </form>
 </div>
 
